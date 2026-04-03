@@ -1,0 +1,118 @@
+{
+  "schemaVersion": "1.0",
+  "lastUpdated": "REPLACE_WITH_DATE",
+  "boards": [
+    {
+      "id": "board-main",
+      "name": "Command Matrix",
+      "columns": [
+        {
+          "id": "col-backlog",
+          "name": "Backlog (Icebox)",
+          "tasks": [
+            {
+              "id": "task-001",
+              "title": "Set Up Morning Brief Cron",
+              "description": "Configure OpenClaw cron to fire at 8am weekdays and post daily brief to #daily-brief channel. Includes: weather, calendar, top 3 tasks, urgent emails.",
+              "owner": "COO",
+              "priority": "Medium",
+              "createdAt": "REPLACE_WITH_DATE",
+              "completedAt": null,
+              "tags": ["automation", "setup"],
+              "notes": "Waiting on channel setup first."
+            },
+            {
+              "id": "task-002",
+              "title": "Integrate Email (Gmail/Outlook)",
+              "description": "Set up gog CLI or equivalent so COO can check inbox during heartbeats. OAuth required. Evaluate privacy tradeoffs first.",
+              "owner": "You",
+              "priority": "Low",
+              "createdAt": "REPLACE_WITH_DATE",
+              "completedAt": null,
+              "tags": ["integration", "email"],
+              "notes": "Nice to have — heartbeats work without it."
+            }
+          ]
+        },
+        {
+          "id": "col-active",
+          "name": "Active (In Progress)",
+          "tasks": [
+            {
+              "id": "task-101",
+              "title": "🚀 Launch MVP",
+              "description": "Get product in front of first 10 users. Core loop must work. Don't wait for perfect — ship when it's good enough to learn from.",
+              "owner": "You",
+              "priority": "High",
+              "createdAt": "REPLACE_WITH_DATE",
+              "completedAt": null,
+              "tags": ["product", "milestone"],
+              "blockers": [],
+              "successCriteria": "10 users activated, feedback loop established."
+            },
+            {
+              "id": "task-102",
+              "title": "📋 Weekly Review System",
+              "description": "Establish a weekly review ritual: what shipped, what blocked, top 3 priorities for next week. COO to prompt every Friday at 5pm.",
+              "owner": "COO",
+              "priority": "Medium",
+              "createdAt": "REPLACE_WITH_DATE",
+              "completedAt": null,
+              "tags": ["operations", "recurring"],
+              "notes": "Cron not yet configured."
+            }
+          ]
+        },
+        {
+          "id": "col-review",
+          "name": "Review (Boardroom)",
+          "tasks": [
+            {
+              "id": "task-201",
+              "title": "Customize SOUL.md",
+              "description": "Replace all [CUSTOMIZE THIS] placeholders with your actual preferences. This defines your COO's personality — don't skip it.",
+              "owner": "You",
+              "priority": "High",
+              "createdAt": "REPLACE_WITH_DATE",
+              "completedAt": null,
+              "tags": ["setup"],
+              "reviewNotes": "Draft done. Check tone feels right before marking complete."
+            }
+          ]
+        },
+        {
+          "id": "col-done",
+          "name": "Done (Archive)",
+          "tasks": [
+            {
+              "id": "task-301",
+              "title": "✅ Install the-coo Skill",
+              "description": "Ran install-coo.sh, files copied to workspace, memory directory created.",
+              "owner": "You",
+              "priority": "High",
+              "createdAt": "REPLACE_WITH_DATE",
+              "completedAt": "REPLACE_WITH_DATE",
+              "tags": ["setup", "milestone"]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "_schema": {
+    "task": {
+      "id": "string — unique, e.g. task-001",
+      "title": "string — emoji prefix optional, keep it short",
+      "description": "string — what, why, and current status",
+      "owner": "string — who is responsible (you, COO, or a person's name)",
+      "priority": "enum — High | Medium | Low",
+      "createdAt": "ISO 8601 timestamp",
+      "completedAt": "ISO 8601 timestamp or null",
+      "tags": ["array of strings — for filtering"],
+      "blockers": ["array of strings — what's in the way"],
+      "notes": "string — optional context",
+      "reviewNotes": "string — feedback before marking done",
+      "successCriteria": "string — how you'll know this is actually done"
+    }
+  }
+}
